@@ -21,6 +21,36 @@ public class Conta {
 	}
 	
 	//metodos
+	
+	public void depositar(double valor) {
+		if(valor > 0) saldo += valor;
+	}
+	
+	
+	public boolean sacar(double valor) {
+		
+		if(valor > 0 && saldo >= valor) {
+			saldo -= valor;
+			System.out.println("Saque efetuado com sucesso!");
+			return true;
+		}
+		System.out.println("Verifique seu saldo!");
+		return false;
+	}
+	
+	public boolean transferir (double valor, Conta contaDestino) {
+		
+		if(valor > 0 && saldo >= valor) {
+			sacar(valor);
+			contaDestino.depositar(valor);
+			System.out.println("Transferência efetuada com sucesso!");
+			return true;
+		}
+		System.out.println("Verifique seu saldo!");
+		return false;
+	}
+		
+	
 
 	//encapsulamentos
 	public int getAgencia() {
@@ -39,13 +69,6 @@ public class Conta {
 		this.numeroConta = numeroConta;
 	}
 
-	public double getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
 
 	public String getTitular() {
 		return titular;
@@ -54,5 +77,15 @@ public class Conta {
 	public void setTitular(String titular) {
 		this.titular = titular;
 	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+	
+	
 
 }

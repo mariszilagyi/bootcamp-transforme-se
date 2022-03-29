@@ -19,10 +19,35 @@ public class TestaBanco {
 		 */
 		
 		Conta conta1 = new Conta();
+		
 		conta1.setAgencia(1234);
 		conta1.setNumeroConta(7889);
-		conta1.setSaldo(1000000.50);
 		conta1.setTitular("Mariana Szilagyi");
+		conta1.depositar(230000);
+		
+		Conta conta2 = new Conta();
+		
+		conta2.setAgencia(2345);
+		conta2.setNumeroConta(8990);
+		conta2.setTitular("Flavia Almeida");
+
+
+		
+		
+		System.out.println("Agência: " + conta1.getAgencia());
+		System.out.println("Conta: " + conta1.getNumeroConta());
+		System.out.println("Titular: " + conta1.getTitular());
+		System.out.printf("Saldo Atual: R$ %.2f\n" , conta1.getSaldo());
+
+		conta1.sacar(20);
+		
+		System.out.printf("Saldo Atual: R$ %.2f\n" , conta1.getSaldo());
+		
+		conta1.transferir(14000, conta2);
+		
+		System.out.printf("Saldo Atual: R$ %.2f\n" , conta1.getSaldo());
+		System.out.printf("Saldo Atual: R$ %.2f\n" , conta2.getSaldo());
+		
 		
 		
 		
