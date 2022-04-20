@@ -10,13 +10,13 @@ public class TesteExercicio4 {
 	
 	public static void main(String[] args) {
 		
-		Peca peca1 =  new Peca();
-		peca1.setMarca("TestePeca1-Marca");
-		peca1.setModelo("TestePeca1-Modelo");
+		Peca peca1 =  new Vestuario();
+		peca1.setMarca("Vestuário-Marca1");
+		peca1.setModelo("Vestuário-Modelo1");
 		
-		Peca peca2 =  new Peca();
-		peca2.setMarca("TestePeca2-Marca");
-		peca2.setModelo("TestePeca2-Modelo");
+		Peca peca2 =  new Sapato();
+		peca2.setMarca("Sapato-Marca1");
+		peca2.setModelo("Sapato-Modelo1");
 		
 		GuardaVolumes guardaVolumes = new GuardaVolumes();
 		List<Peca> listaPeca1 = new ArrayList();
@@ -48,7 +48,7 @@ public class TesteExercicio4 {
 		
 		guardaVolumes.devolverPecas(1);
 		
-		System.out.println("\nGUARDA VOLUMES DEPOIS DE REMOVER ITEM 1: ");
+		System.out.println("\nGUARDA VOLUMES DEPOIS DE DEVOLVER ITEM 1: ");
 		guardaVolumes.mostrarPecas();
 
 		

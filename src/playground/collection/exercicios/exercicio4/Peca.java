@@ -2,7 +2,7 @@ package playground.collection.exercicios.exercicio4;
 
 import java.util.List;
 
-public class Peca {
+public abstract class Peca {
 	
 	private String marca;
 	private String modelo;
@@ -19,6 +19,9 @@ public class Peca {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
+		
+	public abstract void retirada();
+	
 	@Override
 	public String toString() {
 		return " Marca: " + marca + " | Modelo: " + modelo;

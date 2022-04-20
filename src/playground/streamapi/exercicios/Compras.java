@@ -8,14 +8,12 @@ public class Compras {
 	private Integer codigoCompra;
 	private Cliente cliente;
 	private Produto produto;
-	private Double valor;
 	private static Integer sequencial = 0;
 		
-	public Compras(Cliente cliente, Produto produto, Double valor) {
+	public Compras(Cliente cliente, Produto produto) {
 		sequencial++;
 		this.cliente = cliente;
 		this.produto = produto;
-		this.valor = valor;
 		this.codigoCompra = sequencial;
 	}
 		
@@ -43,18 +41,12 @@ public class Compras {
 		this.produto = produto;
 	}
 
-	public Double getValor() {
-		return valor;
-	}
 
-	public void setValor(Double valor) {
-		this.valor = valor;
-	}
 
 	@Override
 	public String toString() {
-		return "Compras [codigoCompra=" + codigoCompra + ", cliente=" + cliente + ", produto=" + produto + ", valor="
-				+ valor + "]";
+		return "Compras [codigoCompra=" + codigoCompra + ", cliente=" + cliente + ", produto=" + produto + 
+				"]";
 	}
 	
 

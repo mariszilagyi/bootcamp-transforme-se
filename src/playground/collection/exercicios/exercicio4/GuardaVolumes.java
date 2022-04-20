@@ -8,11 +8,12 @@ import java.util.Map.Entry;
 public class GuardaVolumes {
 	
 	private Map<Integer, List<Peca>> dicionarioDePecas = new HashMap<>();
-	private static int contador = 1;
+	private static int contador = 0;
+	private int codigoDaPeca = 0;
 	
 	public Integer guardarPecas(List<Peca> listaDePeca) {
-		
-		this.dicionarioDePecas.put(contador++, listaDePeca);
+		codigoDaPeca = ++contador;
+		this.dicionarioDePecas.put(codigoDaPeca, listaDePeca);
 		return contador;
 	}
 	

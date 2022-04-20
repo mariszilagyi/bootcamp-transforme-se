@@ -5,14 +5,17 @@ public class Produto {
 	private Integer codigoProduto;
 	private String nomeProduto;
 	private String marcaProduto;
+	private Integer valorProduto;
+
 	private static Integer sequencial = 0;
 	
 		
-	public Produto(String nomeProduto, String marcaProduto) {
+	public Produto(String nomeProduto, String marcaProduto, Integer valorProduto) {
 		sequencial++;
 		this.nomeProduto = nomeProduto;
 		this.marcaProduto = marcaProduto;
 		this.codigoProduto = sequencial;
+		this.valorProduto = valorProduto;
 	}
 		
 	public Integer getCodigoProduto() {
@@ -39,12 +42,12 @@ public class Produto {
 		this.marcaProduto = marcaProduto;
 	}
 
-	public static Integer getSequencial() {
-		return sequencial;
+	public Integer getValorProduto() {
+		return valorProduto;
 	}
 
-	public static void setSequencial(Integer sequencial) {
-		Produto.sequencial = sequencial;
+	public void setValorProduto(Integer valorProduto) {
+		this.valorProduto = valorProduto;
 	}
 
 	@Override
