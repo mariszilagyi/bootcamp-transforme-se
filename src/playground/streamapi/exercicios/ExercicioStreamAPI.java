@@ -41,7 +41,7 @@ public class ExercicioStreamAPI {
 		Compras compra8 = new Compras(cliente8, produto8);
 
 //		System.out.println(compra1.toString());
-//		System.out.println(compra2.toString());
+//		System.out.println(compra2.toString());,
 //		System.out.println(compra3.toString());
 //		System.out.println(compra4.toString());
 //		System.out.println(compra5.toString());

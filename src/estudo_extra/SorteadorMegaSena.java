@@ -11,7 +11,7 @@ public class SorteadorMegaSena {
         int qntdNumeros = 6;
 
         while (sorteadorMegaSena.size() < qntdNumeros) {
-            sorteadorMegaSena.add(sorteador.nextInt(61));
+            sorteadorMegaSena.add((sorteador.nextInt(60))+1);
         }
 
         System.out.println(sorteadorMegaSena);
